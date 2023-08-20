@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MPEI_Reminder.WEB", "MPEI_Reminder.WEB\MPEI_Reminder.WEB.csproj", "{D54EE1D4-A884-4428-AADC-8B89BB7E19F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D54EE1D4-A884-4428-AADC-8B89BB7E19F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D54EE1D4-A884-4428-AADC-8B89BB7E19F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D54EE1D4-A884-4428-AADC-8B89BB7E19F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D54EE1D4-A884-4428-AADC-8B89BB7E19F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {740B861C-68F5-454B-B603-E9562C5B90BD}
+	EndGlobalSection
+EndGlobal
