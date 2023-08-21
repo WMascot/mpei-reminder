@@ -15,6 +15,11 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MessageSender.DAL\MessageSender.DAL.csproj" />
+    <ProjectReference Include="..\MPEI_Reminder.BLL\MPEI_Reminder.BLL.csproj" />
+  </ItemGroup>
+
 	<PropertyGroup>
 		<SpaRoot>ClientApp\</SpaRoot>
 	</PropertyGroup>
