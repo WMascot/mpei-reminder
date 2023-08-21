@@ -1,5 +1,9 @@
+using MessageSender.DAL;
+using MessageSender.DAL.Context;
 using Microsoft.AspNetCore.Http.Headers;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Net.Http.Headers;
+using MPEI_Reminder.BLL;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +18,13 @@ builder.Services.AddSpaStaticFiles(configuration =>
 {
     configuration.RootPath = "ClientApp/dist";
 });
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+{
+    var connectionString = builder.Configuration.GetConnectionString("MySQL");
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+}).AddRepositories()
+  .AddServices();
 
 var app = builder.Build();
 
