@@ -79,7 +79,7 @@ else
     });
 }
 
-var scope = app.Services.GetRequiredService<DbInitializer>();
-await scope.InitializeAsync();
+using (var scope = app.Services.CreateScope())
+    await scope.ServiceProvider.GetRequiredService<DbInitializer>().InitializeAsync();
 
 app.Run();
