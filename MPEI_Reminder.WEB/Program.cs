@@ -24,7 +24,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     var connectionString = builder.Configuration.GetConnectionString("MySQL");
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
 }).AddRepositories()
-  .AddServices();
+  .AddServices()
+  .AddScoped<DbInitializer>();
 
 var app = builder.Build();
 
@@ -77,5 +78,8 @@ else
         });
     });
 }
+
+var scope = app.Services.GetRequiredService<DbInitializer>();
+await scope.InitializeAsync();
 
 app.Run();
